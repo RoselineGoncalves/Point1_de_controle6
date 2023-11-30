@@ -1,0 +1,1 @@
+algo permettant d'effectuer un tri par insertion

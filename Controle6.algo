@@ -1,0 +1,23 @@
+ALGORITHM tri_par_insertion
+VAR
+arr[i]: array of INTEGER;
+    i: INTEGER;
+    j: INTEGER;
+    k: INTEGER;
+
+BEGIN
+//initialisation de la variable j à 2
+    j←2;
+    //tant que la variable j est superieur à la longueur du tableau faire
+    WHILE (j<=longueur(arr)) DO
+    //la variable i reçoit j-1 c'est àdire 2-1
+    i←j-1;
+    k←arr[j];
+      WHILE (i>0 and arr[i]) DO
+       arr[i+1]<-arr[i];
+      END_WHILE
+        arr[i+1]<-k
+        j←j+1
+    END_WHILE
+END
+
