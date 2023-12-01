@@ -1,4 +1,4 @@
-ALGORITHM tri_par_insertion
+ALGORITHM tri_par_insertion(tableau)
 VAR
 arr[i]: array of INTEGER;
     i: INTEGER;
@@ -12,12 +12,21 @@ BEGIN
     WHILE (j<=longueur(arr)) DO
     //la variable i reçoit j-1 c'est àdire 2-1
     i←j-1;
+    //la variable k compteur reçoit lelement du tableau à la position j
     k←arr[j];
+    //tant que la variale i>0 et cette variable dans le tableau fait
       WHILE (i>0 and arr[i]) DO
+      //lelement à position i+1 reçoit la valeur de i
        arr[i+1]<-arr[i];
       END_WHILE
         arr[i+1]<-k
         j←j+1
     END_WHILE
+END
+
+BEGIN
+tableau <- [12,11,13,5,6]
+tri_par_insertion(tableau)
+afficher tableau;
 END
 
